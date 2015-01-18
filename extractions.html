@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Stephen Family Dentistry</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="home.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">Stephen Family Dentistry</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="about.html">About Us</a></li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Services<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="bonding.html">Bonding/White Fillings</a></li>
+                <li><a href="bridges.html">Bridges</a></li>
+                <li><a href="crown.html">Crowns</a></li>
+                <li><a href="mini.html">Mini Implant</a></li>
+                <li><a href="dental.html">Dental Implant</a></li>
+                <li><a href="veneers.html">Veneers</a></li>
+                <li><a href="hygiene.html">Hygiene/Periodontal Health</a></li>
+                <li><a href="teeth.html">Teeth Whitening</a></li>
+                <li><a href="zoom.html">ZOOM! Whitening</a></li>
+                <li><a href="dentures.html">Dentures/Partial Dentures</a></li>
+                <li><a href="extractions.html">Extractions</a></li>
+                <li><a href="braces.html">Adult Braces</a></li>
+                <li><a href="rootcanal.html">Root Canal (Endodontics)</a></li>
+                <li><a href="lengthening.html">Crown Lengthening</a></li>
+                <li><a href="postop.html">Post Op Instructions</a></li>
+                <li><a href="bone.html">Bone Grafting</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Practice <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="practice.html">Practice Information</a></li>
+                <li><a href="financialagree.pdf">Form Financial Agreement</a></li>
+                <li><a href="InformationandHistoryback.pdf">Form Medical Information 2</a></li>
+                <li><a href="InformationandHistoryfront.pdf">Form Medical Information 1</a></li>
+                <li><a href="privacysign.pdf">HIPPA--Privacy</a></li>
+                <li><a href="contact.html">Request an Appointment</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Technology <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="digital.html">Digital X-Ray</a></li>
+                <li><a href="itraoral.html">Itraoral Camera</a></li>
+                <li><a href="rotary.html">Rotary Endodontics</a></li>
+              </ul>
+            </li>            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Additional Section<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="billing.html">Our Billing Companies</a></li>
+                <li><a href="coverage.html">Dental Coverage Plan</a></li>
+                <li><a href="referral.html">Referral Program</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <script type="text/javascript">
+      var slideimages = new Array() // create new array to preload images
+      slideimages[0] = new Image() // create new instance of image object
+      slideimages[0].src = "1.jpg" // set image object src property to an image's src, preloading that image in the process
+      slideimages[1] = new Image()
+      slideimages[1].src = "2.jpg"
+      slideimages[2] = new Image()
+      slideimages[2].src = "3.jpg"
+      </script>
+
+      <img src="1.jpg" id="slide" width="950" height="400" />
+
+      <script type="text/javascript">
+      //variable that will increment through the images
+      var step=0
+      function slideit(){
+       //if browser does not support the image object, exit.
+       if (!document.images)
+        return
+       document.getElementById('slide').src = slideimages[step].src
+       if (step<2)
+        step++
+       else
+        step=0
+       //call function "slideit()" every 2.5 seconds
+       setTimeout("slideit()",2500)
+      }
+      slideit()
+      </script>
+
+        <div id="overlay">
+        </div>
+
+        <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Schedule Appointment</a>
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Request an Appointment</h4>
+              </div>
+              <div class="modal-body">
+                <form action="contacted.php" method="POST" class = "appt">
+                  <div>
+                      <label for="firstname">Name</label>
+                      <input name="firstname" size="30" type="text" maxlength="12" value="" required/><br><br>
+                  </div>
+                  <div>
+                      <label for="lastname">Telephone Number</label>
+                      <input name="lastname" size="15" type="text" maxlength="12" required/><br><br>
+                  </div>
+                  <div>
+                      <label for="name">Email Address</label>
+                      <input name="email" size="30" type="email" placeholder="me@somemail.com" maxlength="25" required/><br><br>
+                  </div>
+                  <div>
+                      <label for="date">Appointment Date</label>
+                      <input class="datepicker" type="text"></p>
+                  </div>
+                  <script>
+                      $('.datepicker').datepicker()
+                  </script>
+                  <div>
+                      <label for="time">Appointment Time</label>
+                      <input name="time" size="15" type="text" maxlength="12" required/><br><br>
+                  </div>
+                  <div>
+                      <label for="name">Comments</label>
+                      <textarea name="message"></textarea>
+                  </div><br>
+                  <div>
+                      <button type="submit" name="submit" value="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="page-header">
+        <h1>Extractions</h1>
+      </div>
+      <p class="lead">
+
+Wisdom teeth extractions are a fairly common procedure. Wisdom teeth often cause problems as they are trying to protrude through the gums. When a wisdom tooth is impacted, it means the tooth is coming in at an angle and not straight through the gum line. This can cause pain, the tooth can come in unevenly, or the tooth may only emerge partially. 
+
+When a wisdom tooth only emerges partially a flap of skin, called an operculum, may form over the tooth. This can make the tooth hard to clean, and pieces of food may be caught under the skin. This makes it easy for an infection, called pericoronitis, to develop. It will usually go away on its own, but it causes swelling and pain in the area. 
+
+Impacted teeth and wisdom teeth that can potentially cause problems, like infections, need to be removed. Extractions can range from a single tooth, to removing all four wisdom teeth at once. Based on the preference of the doctor and/or the patient, a local anesthetic could be used to numb the areas where the teeth will be extracted. Others will prefer to go under a general anesthetic so that they will be sedated during the procedure. 
+
+The gum tissue around the wisdom tooth is cut open to reveal the tooth. The tooth is loosened by gripping it tightly and wiggling it back and forth until it can be lifted out of the gums. Sometimes a tooth may be impacted so tightly that it cannot be simply lifted out of the gums. In cases like this the tooth will be broken up into pieces first before being removed. Depending on the incision and extraction site, sutures may be needed to close the area. Soluble sutures are the best option, which will dissolve on their own. 
+
+After the surgery you will need to rest. You need to be driven home by a friend or family member because of the anesthesia. You can expect for the extraction site to bleed for a little while after the surgery. Gauze will be applied at the completion of the surgery, and you will need to change it when it becomes soaked. If bleeding continues for longer than 24 hours you should call your dentist. Rest when you return home, but do not lie flat. This could prolong the bleeding. Prop your head up on a pillow when lying down. Your dentist will prescribe you pain medication, so if you become sore take as directed. You can also use an ice pack for the pain. Your dentist might also provide you with a cleaning solution to clean the extraction site. 
+
+You will be limited to soft foods for a few days after your surgery. Some recommended foods are: 
+
+
+Gelatin
+Pudding
+Yogurt
+Mashed Potatoes
+Ice Cream
+Thin Soups
+...and other food you can eat without chewing.
+
+
+When drinking, make sure you do not use a straw. The sucking motion can loosen your sutures and slow the clotting process. The same goes for smoking. If you have prolonged pain, bleeding, irritation, or don't feel that the extraction site is healing properly call your dentist for a follow up. </p>
+    </div>
+
+    <footer class="footer-long">
+      <div class="bottom-nav">
+        <div class = "links">
+          <li class = "bottom-links"><a href="contact.html">Contact Us</a></li>
+          <li class = "bottom-links"><a href="smile.html">Smile Gallery</a></li>
+          <li class = "bottom-links"><a href="links.html">Links</a></li>
+          <li class = "bottom-links"><a href="FAQ.html">FAQ</a></li>
+        </div>
+      </div>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
